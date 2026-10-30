@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end text-sm text-gray-400 mt-4 md:mt-0 gap-1">
           <div className="flex items-center gap-2">
             <FaPhone size={14} className="text-yellow-400" />
-            <span>+1 (210) 255-3362</span>
+            <span>+1 (913) 282-1310</span>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope size={14} className="text-yellow-400" />
