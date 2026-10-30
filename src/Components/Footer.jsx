@@ -57,8 +57,8 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope size={14} className="text-yellow-400" />
-            <a href="mailto:praneeth@example.com" className="hover:underline">
-              nag69856@gmail.com
+            <a href="mailto:nagillapraneeth88@gmail.com" className="hover:underline">
+              nagillapraneeth88@gmail.com
             </a>
           </div>
           <div>© {new Date().getFullYear()} Praneeth Reddy Nagilla. All Rights Reserved.</div>

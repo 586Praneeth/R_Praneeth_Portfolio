@@ -13,7 +13,7 @@ export default function Contact() {
         {/* Left Side - Contact Form */}
         <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-purple-400/30">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-cyan-300">
-            Send Me a Message
+            Get in Touch
           </h2>
 
           <form

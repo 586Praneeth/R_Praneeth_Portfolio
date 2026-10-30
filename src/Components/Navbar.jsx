@@ -27,6 +27,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-8 text-sm md:text-base">
           {[
             "Home",
+            "About",
             "Education",
             "Experience",
             "Skills",
@@ -70,6 +71,7 @@ export default function Navbar() {
           </button>
           {[
             "Home",
+            "About",
             "Education",
             "Experience",
             "Skills",

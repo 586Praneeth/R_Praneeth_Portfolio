@@ -1,101 +1,67 @@
 import React from "react";
 
+const experienceData = [
+  {
+    role: "Full Stack Developer (Java)", company: "Deloitte", date: "Nov 2025 – Present", location: "United States", icon: "💻", color: "from-cyan-400 to-blue-500",
+    subtitle: "Client: State of New Mexico · ASPEN",
+    tasks: [
+      "Build and enhance Java 17, Spring Boot, React.js, and TypeScript features supporting eligibility determination, benefits processing, and case management.",
+      "Work with ASPEN data collection, EDG, EDBC, and correspondence workflows, translating program rules into application changes.",
+      "Develop secure REST APIs and Oracle SQL/PLSQL queries for enterprise integrations and database-driven business logic.",
+      "Investigate projected release dates, facility records, duplicate data, batch processing, and production transaction inconsistencies.",
+      "Prepare and validate controlled data fixes while preserving audit history and transaction integrity.",
+      "Support AWS, Terraform, containerization, CI/CD, Python automation, and secure API practices as described in my resume."
+    ]
+  },
+  {
+    role: "Java Full Stack Developer", company: "Centene Corporation", date: "Jan 2025 – Oct 2025", location: "St. Louis, Missouri", icon: "🏥", color: "from-green-400 to-emerald-500",
+    tasks: [
+      "Supported healthcare application services with Spring Boot, Spring Data JPA, Hibernate, and REST APIs.",
+      "Built reusable React.js components and integrated them with backend healthcare workflows.",
+      "Used PostgreSQL, MySQL, and SQL to validate records, investigate data issues, and support application processing.",
+      "Assisted with secure API integrations, OAuth2/JWT-based access, troubleshooting, and HIPAA-related development practices.",
+      "Worked with AWS-based environments, Python utilities, automated testing, and CI/CD activities."
+    ]
+  },
+  {
+    role: "Software Engineer", company: "Mindtree", date: "Aug 2021 – Jun 2023", location: "Pune, India", icon: "⚙️", color: "from-purple-400 to-pink-500",
+    tasks: [
+      "Developed Spring Boot services and REST APIs for enterprise HR, finance, and business workflows.",
+      "Implemented relational database operations and Redis caching to improve data retrieval efficiency.",
+      "Supported AWS EC2 and CloudFormation configurations, backend integrations, and secure application development.",
+      "Investigated service and SQL performance issues and contributed to testing with JUnit, Mockito, Selenium, and TestNG.",
+      "Supported Jenkins/Git CI/CD workflows and collaborated with cross-functional Agile teams."
+    ]
+  },
+  {
+    role: "Junior Engineer", company: "ECIL", date: "May 2017 – Jun 2018", location: "Hyderabad, India", icon: "🔧", color: "from-orange-400 to-rose-500",
+    tasks: [
+      "Supported electronic equipment testing, instrumentation validation, and technical inspections.",
+      "Assisted with hardware diagnostics, system troubleshooting, and maintenance activities.",
+      "Reviewed technical documentation and recorded test findings, faults, and corrective actions."
+    ]
+  }
+];
+
 export default function Experience() {
-  const experienceData = [
-    {
-      role: "Full Stack Developer",
-      company: "Centene Corporation",
-      date: "Jan 2025 – Present | Saint Louis, MO",
-      icon: "💻",
-      color: "from-cyan-400 to-blue-500",
-      tasks: [
-        "Developing C++ and Spring Boot microservices for claims and eligibility workflows on AWS.",
-    "Building React.js portals integrated with secure APIs and PostgreSQL databases.",
-    "Implemented Kafka pipelines and AWS Lambda for asynchronous data processing.",
-    "Automating CI/CD with GitHub Actions, Terraform, and EKS deployments."
-      ],
-    },
-    {
-      role: "Java Full Stack Developer",
-      company: "TCS",
-      date: "Jan 2020 – July 2023 | Hyderabad, India",
-      icon: "🏦",
-      color: "from-green-400 to-emerald-500",
-      tasks: [
-        "Developed Java and C++ services for payment authorization and risk validation systems.",
-    "Built Angular dashboards for borrower onboarding and real-time transaction visibility.",
-    "Designed secure REST APIs with OAuth2/JWT for core banking integrations.",
-    "Deployed microservices on Azure AKS using CI/CD pipelines with SonarQube checks."
-      ],
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Birlasoft",
-      date: "Nov 2017 – July 2018 | Hyderabad, India",
-      icon: "📡",
-      color: "from-purple-400 to-pink-500",
-      tasks: [
-       "Developed Spring Boot APIs and Angular UIs for patient care and claim tracking.",
-    "Integrated with EHR/EMR systems (Epic, Cerner) using FHIR/HL7 standards.",
-    "Built Kafka consumers and Spring Batch jobs for claims reconciliation.",
-    "Containerized services with Docker and deployed via Kubernetes pipelines."
-      ],
-    },
-   
-  ];
-
   return (
-    <section
-      id="experience"
-      className="relative px-6 md:px-12 py-20 bg-gradient-to-b from-gray-950 via-purple-950 to-blue-900 text-white"
-    >
-      {/* Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Experience
-        </h2>
-        <p className="text-gray-400 mt-3">My career growth and milestones</p>
+    <section id="experience" className="relative px-6 md:px-12 py-20 bg-gradient-to-b from-gray-950 via-purple-950 to-blue-900 text-white">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</h2>
+        <p className="text-gray-400 mt-3">Enterprise software development and engineering experience</p>
       </div>
-
-      {/* Timeline Vertical Style */}
-      <div className="relative max-w-3xl mx-auto">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-400 via-blue-500 to-purple-500"></div>
-
-        {experienceData.map((exp, i) => (
-          <div
-            key={i}
-            className={`mb-16 flex ${
-              i % 2 === 0 ? "justify-start" : "justify-end"
-            } relative`}
-          >
-            {/* Connector Dot */}
-            <div
-              className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r ${exp.color} shadow-xl`}
-            >
-              <span className="text-2xl">{exp.icon}</span>
+      <div className="max-w-5xl mx-auto relative border-l-2 border-cyan-400/40 pl-6 md:pl-10 space-y-8">
+        {experienceData.map((exp) => (
+          <article key={`${exp.company}-${exp.date}`} className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 md:p-8 shadow-xl">
+            <div className={`absolute -left-[39px] md:-left-[55px] top-8 w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-r ${exp.color}`} aria-hidden="true">{exp.icon}</div>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+              <div><h3 className="text-xl font-bold text-cyan-300">{exp.role}</h3><p className="font-semibold text-white">{exp.company}</p>{exp.subtitle && <p className="text-purple-200 text-sm mt-1">{exp.subtitle}</p>}</div>
+              <p className="text-sm text-gray-300 md:text-right">{exp.date}<span className="block">{exp.location}</span></p>
             </div>
-
-            {/* Card */}
-            <div
-              className={`w-[45%] p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl ${
-                i % 2 === 0 ? "ml-16 text-left" : "mr-16 text-right"
-              }`}
-            >
-              <h3 className="text-xl font-bold text-cyan-300">{exp.role}</h3>
-              <p className="text-sm text-gray-400 mb-3">
-                {exp.company} | {exp.date}
-              </p>
-              <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
-                {exp.tasks.map((task, idx) => (
-                  <li key={idx}>{task}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+            <ul className="list-disc pl-5 text-gray-200 text-sm md:text-base leading-relaxed space-y-2">{exp.tasks.map((task) => <li key={task}>{task}</li>)}</ul>
+          </article>
         ))}
       </div>
     </section>
   );
 }
-
